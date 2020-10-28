@@ -2,11 +2,16 @@
 <html>
  <head>
   <meta charset="UTF-8">
-  <title>Basketball Team</title>
+  <title><%= @team[:name] %></title>
  </head>
  <body>
- 
-
+  <% @team.each do |key, value| %>
+    <% if key == :name %>
+      <h1><%=key %>: <%= value %></h1>
+    <% else %>
+      <h2><%= key %>: <%= value %></h2>
+    <%end%>
+  <%end%>
 
  </body>
 </html>
